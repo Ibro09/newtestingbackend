@@ -25,7 +25,9 @@ app.get('/', async(req, res) => {
 res.send('welcome')
 });
 
-
+app.get("*", (req, res) => {
+  res.send("Hello, Vercel!");
+});
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
