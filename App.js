@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // Middleware
 const userRoutes = require('./Routes/Routes');
+ 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public')); // Serve static files from the public folder
@@ -17,10 +18,13 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
   
+
+
 // Define routes
 app.get('/', async(req, res) => {
 res.send('welcome')
 });
+
 
 // Start the server
 app.listen(PORT, () => {
