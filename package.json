@@ -1,4 +1,12 @@
 {
+  "name": "sonic",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app.js",
+    "build": "tsc",
+    "test": "jest"
+   
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
